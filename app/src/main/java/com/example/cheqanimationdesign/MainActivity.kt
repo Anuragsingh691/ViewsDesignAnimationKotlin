@@ -20,11 +20,12 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         resizeTextView()
-        setStatusBarColor(this,R.color.home_top_bg_color)
+        setStatusBarColor(this, R.color.home_top_bg_color)
     }
 
     private fun resizeTextView() {
-        val scaleAnimation = AnimationUtils.loadAnimation(this@MainActivity, R.anim.drop_down_animation)
+        val scaleAnimation =
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.drop_down_animation)
         binding.welcomeTxt.startAnimation(scaleAnimation)
         binding.coinBar.startAnimation(scaleAnimation)
         binding.profileIcToolbar.startAnimation(scaleAnimation)
