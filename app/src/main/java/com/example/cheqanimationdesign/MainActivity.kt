@@ -1,14 +1,12 @@
 package com.example.cheqanimationdesign
 
 import android.content.Context
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
 import com.example.cheqanimationdesign.databinding.ActivityMainBinding
-import com.robinhood.ticker.TickerUtils
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -21,12 +19,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        setStatusBarColor(this,R.color.white)
+        resizeTextView()
+        setStatusBarColor(this,R.color.home_top_bg_color)
     }
 
     private fun resizeTextView() {
-        val scaleAnimation = AnimationUtils.loadAnimation(this@MainActivity, R.anim.expand_x)
-        binding.txtView.startAnimation(scaleAnimation)
+        val scaleAnimation = AnimationUtils.loadAnimation(this@MainActivity, R.anim.drop_down_animation)
+        binding.welcomeTxt.startAnimation(scaleAnimation)
+        binding.coinBar.startAnimation(scaleAnimation)
+        binding.profileIcToolbar.startAnimation(scaleAnimation)
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {

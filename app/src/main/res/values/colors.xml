@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="home_top_bg_color">#FAF8F8</color>
+    <color name="coin_card_bg">#5EDABF</color>
+    <color name="line_bg">#E6EAE9</color>
+    <color name="super_black">#131414</color>
 </resources>
