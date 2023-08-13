@@ -20,4 +20,8 @@
     <string name="deno_string">/900</string>
     <string name="num">799</string>
     <string name="good">very good</string>
+    <string name="home">Home</string>
+    <string name="pay">Pay</string>
+    <string name="rewards">Rewards</string>
+    <string name="action_recommended">ACTION RECOMMENDED</string>
 </resources>
