@@ -6,12 +6,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="10dp"
+        app:strokeColor="@color/white"
         app:cardCornerRadius="@dimen/coin_card_corner_radius">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-             android:paddingBottom="20dp"
             android:background="@color/white">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +29,7 @@
                     android:fontFamily="@font/basier_circle_bold"
                     android:text="@string/total_due"
                     android:textAllCaps="true"
-                    android:textColor="@color/super_black"
+                    android:textColor="@color/black_500"
                     android:textSize="@dimen/text_size_regular"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@id/total_due_amount_txt"
@@ -45,7 +45,7 @@
                     android:fontFamily="@font/basier_circle_semibold"
                     android:gravity="end"
                     android:text="@string/due_amount"
-                    android:textColor="@color/super_black"
+                    android:textColor="@color/black_500"
                     android:textSize="@dimen/txt_super_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -102,6 +102,15 @@
                 android:layout_marginEnd="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ic_bob" />
+
+            <include
+                android:id="@+id/line2"
+                layout="@layout/horizontal_line_view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pay_using_cheq_btn" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

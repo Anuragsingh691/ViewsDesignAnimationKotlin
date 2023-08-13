@@ -39,7 +39,7 @@
             android:fontFamily="@font/basier_circle_semibold"
             android:gravity="center_vertical"
             tools:text="@string/axis_platinum_title"
-            android:textColor="@color/super_black"
+            android:textColor="@color/black_500"
             android:textSize="@dimen/text_size_regular"
             app:layout_constraintStart_toEndOf="@id/ic_axis"
             app:layout_constraintTop_toTopOf="@id/ic_axis" />
@@ -67,7 +67,7 @@
             android:gravity="center_vertical"
             tools:text="@string/axis_due_amount"
             android:textAllCaps="true"
-            android:textColor="@color/super_black"
+            android:textColor="@color/black_500"
             android:textSize="@dimen/text_size_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/ic_axis" />

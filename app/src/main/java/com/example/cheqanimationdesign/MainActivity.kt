@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        setViews()
-        resizeTextView()
         setStatusBarColor(this, R.color.home_top_bg_color)
+        setViews()
+        //resizeTextView()
     }
 
     private fun setViews() {
@@ -36,9 +36,11 @@ class MainActivity : AppCompatActivity() {
             )
         )
         binding.repaymentCard.icAxis.axisHeadlineTxt.text = getString(R.string.axis_platinum_title)
-        binding.repaymentCard.icAxis.axisDescTxt.text= getString(R.string.credit_card_text)
-        binding.repaymentCard.icAxis.axisAmountHeadlineTxt.text = getString(R.string.axis_due_amount)
-        binding.repaymentCard.icAxis.axisAmountOverdueTxt.text = getString(R.string.overdue_by_1_day)
+        binding.repaymentCard.icAxis.axisDescTxt.text = getString(R.string.credit_card_text)
+        binding.repaymentCard.icAxis.axisAmountHeadlineTxt.text =
+            getString(R.string.axis_due_amount)
+        binding.repaymentCard.icAxis.axisAmountOverdueTxt.text =
+            getString(R.string.overdue_by_1_day)
 
         // Sbi card
         binding.repaymentCard.icSbi.bankImg.setImageDrawable(
