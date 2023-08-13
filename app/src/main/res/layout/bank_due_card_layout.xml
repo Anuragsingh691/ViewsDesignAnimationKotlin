@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ic_axis"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="8dp"
+            app:strokeColor="@color/dsc_grey"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/bank_img"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                tools:src="@drawable/ic_bob" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/axis_headline_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/basier_circle_semibold"
+            android:gravity="center_vertical"
+            tools:text="@string/axis_platinum_title"
+            android:textColor="@color/super_black"
+            android:textSize="@dimen/text_size_regular"
+            app:layout_constraintStart_toEndOf="@id/ic_axis"
+            app:layout_constraintTop_toTopOf="@id/ic_axis" />
+
+        <TextView
+            android:id="@+id/axis_desc_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:fontFamily="@font/basier_circle_regular"
+            tools:text="@string/credit_card_text"
+            android:textAllCaps="true"
+            android:textColor="@color/dsc_grey"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_axis"
+            app:layout_constraintStart_toStartOf="@id/axis_headline_txt" />
+
+        <TextView
+            android:id="@+id/axis_amount_headline_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/basier_circle_semibold"
+            android:gravity="center_vertical"
+            tools:text="@string/axis_due_amount"
+            android:textAllCaps="true"
+            android:textColor="@color/super_black"
+            android:textSize="@dimen/text_size_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ic_axis" />
+
+        <TextView
+            android:id="@+id/axis_amount_overdue_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/basier_circle_regular"
+            tools:text="@string/overdue_by_1_day"
+            android:textColor="@color/overdue_color"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_axis"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/axis_amount_headline_txt" />
+
+        <TextView
+            android:id="@+id/no_bill_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:fontFamily="@font/basier_circle_regular"
+            tools:text="@string/overdue_by_1_day"
+            android:textColor="@color/dsc_grey"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/axis_amount_headline_txt" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

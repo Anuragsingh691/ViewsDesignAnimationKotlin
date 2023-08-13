@@ -10,4 +10,5 @@
     <dimen name="text_size_bold">20sp</dimen>
     <dimen name="text_size_regular">12sp</dimen>
     <dimen name="txt_super_bold">22sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
 </resources>

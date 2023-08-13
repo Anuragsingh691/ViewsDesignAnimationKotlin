@@ -16,6 +16,7 @@
             android:fontFamily="@font/basier_circle_semibold"
             android:text="@string/welcome_txt"
             android:textSize="@dimen/text_size_bold"
+            android:textColor="@color/super_black"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -61,6 +62,7 @@
             app:layout_constraintTop_toTopOf="@id/welcome_txt" />
 
         <include
+            android:id="@+id/repayment_card"
             layout="@layout/due_credit_repayment_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

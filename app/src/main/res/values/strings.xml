@@ -5,4 +5,14 @@
     <string name="total_due">Total due</string>
     <string name="rupees">₹</string>
     <string name="due_amount">₹ 60000  </string>
+    <string name="axis_due_amount">₹30,000.06</string>
+    <string name="no_bill_found">No bill found</string>
+    <string name="due_in_3_days">Due in 3 days</string>
+    <string name="overdue_by_1_day">Overdue by 1 day</string>
+    <string name="axis_platinum_title">Axis Platinum</string>
+    <string name="credit_card_text">Credit Card</string>
+    <string name="sbi_simply_title">SBI Simply Click</string>
+    <string name="bob_credit_title">BOB Credit Platinum</string>
+    <string name="pay_now_title">Pay Now</string>
+    <string name="earn_cheq_points">Earn 1% CheQ Chips</string>
 </resources>

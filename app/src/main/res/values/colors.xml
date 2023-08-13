@@ -6,4 +6,7 @@
     <color name="coin_card_bg">#5EDABF</color>
     <color name="line_bg">#E6EAE9</color>
     <color name="super_black">#131414</color>
+    <color name="dsc_grey">#858989</color>
+    <color name="overdue_color">#F5466A</color>
+    <color name="expand_color_bg">#00C197</color>
 </resources>
