@@ -80,17 +80,6 @@
                         app:layout_constraintTop_toTopOf="@id/welcome_txt" />
 
                     <include
-                        android:id="@+id/repayment_card_bg"
-                        layout="@layout/due_bg_card"
-                        android:layout_width="match_parent"
-                        android:layout_height="360dp"
-                        android:layout_marginHorizontal="28dp"
-                        android:layout_marginTop="25dp"
-                        android:elevation="5dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/welcome_txt" />
-
-                    <include
                         android:id="@+id/repayment_card"
                         layout="@layout/due_credit_repayment_card"
                         android:layout_width="match_parent"

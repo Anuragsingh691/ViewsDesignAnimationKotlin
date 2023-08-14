@@ -38,4 +38,6 @@
     <string name="travel">Travel</string>
     <string name="shopping">Shopping</string>
     <string name="see_all">See All</string>
+    <string name="featured_deals">Featured Deals</string>
+    <string name="deals_coin_text">1 = ₹1.00</string>
 </resources>
