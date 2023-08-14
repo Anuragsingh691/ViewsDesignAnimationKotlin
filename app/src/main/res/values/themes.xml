@@ -5,12 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.MySplash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">@color/white</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_animation</item>
-        <item name="postSplashScreenTheme">@style/Theme.CheqAnimationDesign</item>
-        <item name="windowSplashScreenAnimationDuration">2000</item>
-    </style>
-
     <style name="Theme.CheqAnimationDesign" parent="Base.Theme.CheqAnimationDesign" />
 </resources>
