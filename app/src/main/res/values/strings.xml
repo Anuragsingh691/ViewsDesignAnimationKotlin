@@ -45,4 +45,5 @@
     <string name="deals_coin_text2">1 = ₹0.50</string>
     <string name="deals_coin_text3">1 = ₹0.40</string>
     <string name="one_fifty">₹150</string>
+    <string name="other_featured_deals">OTHER Featured deals</string>
 </resources>

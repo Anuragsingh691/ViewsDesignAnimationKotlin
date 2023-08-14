@@ -11,7 +11,9 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="60dp">
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="60dp"
+            tools:layout_editor_absoluteY="117dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -186,15 +188,15 @@
                         android:id="@+id/feature_deals_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         android:layout_marginStart="@dimen/margin_left_home"
                         android:layout_marginTop="10dp"
+                        android:fontFamily="@font/basier_circle_bold"
                         android:text="@string/featured_deals"
                         android:textAllCaps="true"
-                        android:fontFamily="@font/basier_circle_bold"
+                        android:textColor="@color/credit_score_bg"
                         android:textSize="@dimen/text_size_regular"
-                        android:textColor="@color/credit_score_bg"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <include
                         android:id="@+id/deals_coin_card"
@@ -210,11 +212,45 @@
                         layout="@layout/deals_recycler_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_constraintStart_toStartOf="parent"
                         android:layout_marginHorizontal="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/feature_deals_txt"
-                        android:layout_marginTop="20dp"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/feature_deals_txt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/home_top_bg_color"
+                    app:layout_constraintTop_toBottomOf="@id/featured_layout">
+
+                    <TextView
+                        android:id="@+id/other_feature_deals_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_left_home"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/basier_circle_bold"
+                        android:text="@string/other_featured_deals"
+                        android:textAllCaps="true"
+                        android:textColor="@color/credit_score_bg"
+                        android:textSize="@dimen/text_size_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <include
+                        android:id="@+id/other_deals_rv_layout"
+                        layout="@layout/deals_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/other_feature_deals_txt" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -227,6 +263,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
+            android:background="@color/white"
             android:elevation="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

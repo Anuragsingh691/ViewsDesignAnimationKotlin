@@ -35,6 +35,15 @@ class ViewPressingActivity : AppCompatActivity() {
             SpacesItemDecoration(10)
         )
         adapter.updateData(Utils.getBrandsFeaturedDealList())
+
+        binding.otherDealsRvLayout.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.otherDealsRvLayout.recyclerView.adapter = adapter
+        binding.otherDealsRvLayout.recyclerView.addItemDecoration(
+            SpacesItemDecoration(10)
+        )
+        binding.bottomBar.homeIcon.setOnClickListener { view->
+            onBackPressed()
+        }
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {
