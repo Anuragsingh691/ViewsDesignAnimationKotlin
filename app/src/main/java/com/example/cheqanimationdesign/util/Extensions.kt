@@ -6,8 +6,16 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cheqanimationdesign.ui.EmptyClickedActivity
 
-fun View.onClick(context: Context,destination:AppCompatActivity) {
+fun View.onClick(context: Context, destination: AppCompatActivity) {
     this.setOnClickListener { view ->
         context.startActivity(Intent(context, destination::class.java))
     }
+}
+
+fun View.show() {
+    this.visibility = View.VISIBLE
+}
+
+fun View.hide() {
+    this.visibility = View.GONE
 }

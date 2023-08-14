@@ -39,6 +39,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/tool_bar_coin_card"
                         android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_marginEnd="@dimen/margin_right_coin"

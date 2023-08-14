@@ -1,7 +1,6 @@
 package com.example.cheqanimationdesign.ui
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,10 +8,13 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.lifecycleScope
 import com.example.cheqanimationdesign.R
 import com.example.cheqanimationdesign.databinding.ActivityMainBinding
 import com.example.cheqanimationdesign.util.onClick
+import com.example.cheqanimationdesign.util.show
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         setStatusBarColor(this, R.color.home_top_bg_color)
         setViews()
-        resizeTextView()
+        animateViews()
     }
 
     private fun setViews() {
@@ -72,14 +74,11 @@ class MainActivity : AppCompatActivity() {
         binding.bottomBar.rewardsIcon.onClick(this, ViewPressingActivity.newInstance())
     }
 
-    private fun resizeTextView() {
-        val scaleAnimation =
-            AnimationUtils.loadAnimation(this@MainActivity, R.anim.translate_up_animation)
-        binding.bottomBar.root.startAnimation(scaleAnimation)
-        binding.neverMissCard.startAnimation(scaleAnimation)
-//        binding.welcomeTxt.startAnimation(scaleAnimation)
-//        binding.coinBar.startAnimation(scaleAnimation)
-//        binding.profileIcToolbar.startAnimation(scaleAnimation)
+    private fun animateViews() {
+        lifecycleScope.launch {
+            async { animateDropDownViews() }.await()
+            async { animateComplexViews() }.await()
+        }
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {
@@ -87,4 +86,32 @@ class MainActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = ContextCompat.getColor(context, color)
     }
+
+    private fun animateDropDownViews() {
+        val dropDownAnimation =
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.combine_drop_down_fade_in)
+        binding.welcomeTxt.startAnimation(dropDownAnimation)
+        binding.toolBarCoinCard.startAnimation(dropDownAnimation)
+        binding.profileIcToolbar.startAnimation(dropDownAnimation)
+        binding.repaymentCard.root.startAnimation(dropDownAnimation)
+        val translateUpAnimation =
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.combine_translate_up_fade_in)
+        binding.yourCreditScore.startAnimation(translateUpAnimation)
+        binding.creditScoreCard.scoreCardRoot.startAnimation(translateUpAnimation)
+        binding.actionRecommended.startAnimation(translateUpAnimation)
+        binding.neverMissCard.startAnimation(translateUpAnimation)
+        binding.bottomBar.root.startAnimation(translateUpAnimation)
+    }
+
+    private fun animateComplexViews() {
+        binding.repaymentCard.totalDueLayout.show()
+        val dropDownAnimation =
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.combine_drop_down_fade_in)
+        binding.repaymentCard.totalDueLayout.startAnimation(dropDownAnimation)
+        val expandAnimation =
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.combine_expand_x_fade_in)
+        binding.repaymentCard.payUsingCheqBtn.root.show()
+        binding.repaymentCard.payUsingCheqBtn.root.startAnimation(expandAnimation)
+    }
+
 }
