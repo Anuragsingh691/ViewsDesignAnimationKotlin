@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.cheqanimationdesign.ui.EmptyClickedActivity
+import com.example.cheqanimationdesign.util.onClick
 
 
 class BrandAdapter() : RecyclerView.Adapter<BrandAdapter.ViewHolder>() {
@@ -36,7 +38,9 @@ class BrandAdapter() : RecyclerView.Adapter<BrandAdapter.ViewHolder>() {
             .load(data.brandFoodImage)
             .placeholder(R.drawable.ic_launcher_foreground)
             .into(holder.brandItemImg);
-        holder.productCoinBarText.text =  holder.productCoinBarText.context.getString(data.coinExchangeValue)
+        holder.productCoinBarText.text =
+            holder.productCoinBarText.context.getString(data.coinExchangeValue)
+        holder.itemView.onClick(holder.itemView.context, EmptyClickedActivity.newInstance())
     }
 
     override fun getItemCount(): Int {

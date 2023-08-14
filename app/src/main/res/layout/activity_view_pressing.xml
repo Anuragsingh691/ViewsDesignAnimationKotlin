@@ -221,6 +221,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/other_deals_layout"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
                     android:layout_marginTop="50dp"
@@ -253,6 +254,13 @@
                         app:layout_constraintTop_toBottomOf="@id/other_feature_deals_txt" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/other_deals_layout"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/ic_footer"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

@@ -9,8 +9,10 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.cheqanimationdesign.R
 import com.example.cheqanimationdesign.databinding.ActivityMainBinding
+import com.example.cheqanimationdesign.util.onClick
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -67,9 +69,7 @@ class MainActivity : AppCompatActivity() {
         binding.repaymentCard.icBob.noBillTxt.visibility = View.VISIBLE
         binding.repaymentCard.icBob.noBillTxt.text = getString(R.string.no_bill_found)
 
-        binding.bottomBar.rewardsIcon.setOnClickListener { view ->
-            startActivity(Intent(this, ViewPressingActivity::class.java))
-        }
+        binding.bottomBar.rewardsIcon.onClick(this, ViewPressingActivity.newInstance())
     }
 
     private fun resizeTextView() {

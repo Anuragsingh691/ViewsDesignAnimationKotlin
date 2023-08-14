@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CheqAnimationDesign"
         tools:targetApi="31">
         <activity
+            android:name=".ui.EmptyClickedActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.ViewPressingActivity"
             android:exported="false" />
         <activity

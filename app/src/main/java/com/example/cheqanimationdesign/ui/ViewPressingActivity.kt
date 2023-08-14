@@ -1,6 +1,7 @@
 package com.example.cheqanimationdesign.ui
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
@@ -11,6 +12,7 @@ import com.example.cheqanimationdesign.R
 import com.example.cheqanimationdesign.util.SpacesItemDecoration
 import com.example.cheqanimationdesign.databinding.ActivityViewPressingBinding
 import com.example.cheqanimationdesign.util.Utils
+import com.example.cheqanimationdesign.util.onClick
 
 class ViewPressingActivity : AppCompatActivity() {
     lateinit var binding: ActivityViewPressingBinding
@@ -36,19 +38,31 @@ class ViewPressingActivity : AppCompatActivity() {
         )
         adapter.updateData(Utils.getBrandsFeaturedDealList())
 
-        binding.otherDealsRvLayout.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        binding.otherDealsRvLayout.recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.otherDealsRvLayout.recyclerView.adapter = adapter
         binding.otherDealsRvLayout.recyclerView.addItemDecoration(
             SpacesItemDecoration(10)
         )
-        binding.bottomBar.homeIcon.setOnClickListener { view->
+        binding.bottomBar.homeIcon.setOnClickListener { view ->
             onBackPressed()
         }
+        binding.chipCard.root.onClick(this, EmptyClickedActivity.newInstance())
+        binding.voucherCard.root.onClick(this, EmptyClickedActivity.newInstance())
+        binding.instantCashCard.root.onClick(this, EmptyClickedActivity.newInstance())
+        binding.icFoodImg.onClick(this, EmptyClickedActivity.newInstance())
+        binding.icTravelImg.onClick(this, EmptyClickedActivity.newInstance())
+        binding.icShoppingImg.onClick(this, EmptyClickedActivity.newInstance())
+        binding.icSeeAllImg.onClick(this, EmptyClickedActivity.newInstance())
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = ContextCompat.getColor(context, color)
+    }
+
+    companion object {
+        fun newInstance() = ViewPressingActivity()
     }
 }
