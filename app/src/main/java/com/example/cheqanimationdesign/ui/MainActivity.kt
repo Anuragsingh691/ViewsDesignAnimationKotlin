@@ -1,4 +1,4 @@
-package com.example.cheqanimationdesign
+package com.example.cheqanimationdesign.ui
 
 import android.content.Context
 import android.content.Intent
@@ -9,6 +9,7 @@ import android.view.WindowManager
 import android.view.animation.AnimationUtils
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
+import com.example.cheqanimationdesign.R
 import com.example.cheqanimationdesign.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

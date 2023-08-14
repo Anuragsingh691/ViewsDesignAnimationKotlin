@@ -175,8 +175,9 @@
                     app:layout_constraintTop_toBottomOf="@id/ic_see_all_img" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/featured_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="320dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/deal_view_bg"
                     app:layout_constraintTop_toBottomOf="@id/see_all_txt">
@@ -191,8 +192,8 @@
                         android:layout_marginTop="10dp"
                         android:text="@string/featured_deals"
                         android:textAllCaps="true"
-                        android:fontFamily="@font/basier_circle_medium"
-                        android:textSize="@dimen/text_size_small"
+                        android:fontFamily="@font/basier_circle_bold"
+                        android:textSize="@dimen/text_size_regular"
                         android:textColor="@color/credit_score_bg"/>
 
                     <include
@@ -203,6 +204,17 @@
                         android:layout_marginEnd="20dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="@id/feature_deals_txt" />
+
+                    <include
+                        android:id="@+id/deals_rv_layout"
+                        layout="@layout/deals_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginHorizontal="@dimen/margin_left_home"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/feature_deals_txt"
+                        android:layout_marginTop="20dp"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

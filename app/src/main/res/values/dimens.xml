@@ -4,6 +4,7 @@
     <dimen name="margin_top_home">25dp</dimen>
     <dimen name="margin_right_coin">12dp</dimen>
     <dimen name="coin_card_corner_radius">16dp</dimen>
+    <dimen name="card_radius_200">12dp</dimen>
 
 
     // text sizes
@@ -14,4 +15,5 @@
     <dimen name="txt_super_bold">22sp</dimen>
     <dimen name="text_size_small">10sp</dimen>
     <dimen name="text_size_bold_500">24sp</dimen>
+    <dimen name="text_size_bold_700">28sp</dimen>
 </resources>

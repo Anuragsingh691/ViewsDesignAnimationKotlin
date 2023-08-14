@@ -14,4 +14,6 @@
     <color name="green_200">#00C197</color>
     <color name="grey_100">#ADB2B2</color>
     <color name="deals_coin_card_bg">#E4BC33</color>
+    <color name="swiggy_bg_color">#FF8803</color>
+    <color name="subway_bg_color">#008938</color>
 </resources>
