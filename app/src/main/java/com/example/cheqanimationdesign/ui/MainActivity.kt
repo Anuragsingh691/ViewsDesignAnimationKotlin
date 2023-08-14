@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.cheqanimationdesign.R
 import com.example.cheqanimationdesign.databinding.ActivityMainBinding
+import com.example.cheqanimationdesign.util.Utils
 import com.example.cheqanimationdesign.util.onClick
 import com.example.cheqanimationdesign.util.show
 import kotlinx.coroutines.async
@@ -78,6 +79,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             async { animateDropDownViews() }.await()
             async { animateComplexViews() }.await()
+            Utils.startCountAnimation(binding.repaymentCard.totalDueAmountTxt)
         }
     }
 

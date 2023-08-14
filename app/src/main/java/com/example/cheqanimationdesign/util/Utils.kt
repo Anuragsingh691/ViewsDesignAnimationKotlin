@@ -1,7 +1,10 @@
 package com.example.cheqanimationdesign.util
 
+import android.animation.ValueAnimator
+import android.widget.TextView
 import com.example.cheqanimationdesign.BrandsData
 import com.example.cheqanimationdesign.R
+
 
 object Utils {
 
@@ -40,5 +43,13 @@ object Utils {
         brandsList.add(swiggyData2)
         brandsList.add(subwayData2)
         return brandsList.toList()
+    }
+
+    fun startCountAnimation(textView: TextView) {
+        val animator = ValueAnimator.ofInt(100, 0) //0 is min number, 600 is max number
+        animator.duration = 10000 //Duration is in milliseconds
+        val rupessSymbol = textView.context.getString(R.string.rupees)
+        animator.addUpdateListener { animation -> textView.setText(rupessSymbol + animation.animatedValue.toString()) }
+        animator.start()
     }
 }
