@@ -2,6 +2,7 @@
     <string name="app_name">CheqAnimationDesign</string>
     <string name="welcome_txt">Welcome</string>
     <string name="coin_txt">4,567</string>
+    <string name="coin_txt2">2344</string>
     <string name="total_due">Total due</string>
     <string name="rupees">₹</string>
     <string name="due_amount">₹ 60000  </string>
@@ -24,4 +25,17 @@
     <string name="pay">Pay</string>
     <string name="rewards">Rewards</string>
     <string name="action_recommended">ACTION RECOMMENDED</string>
+    <string name="vouchers_cash">Vouchers &amp; Cash</string>
+    <string name="chips_balance">Chips Balance</string>
+    <string name="waiting_txt">waiting</string>
+    <string name="eight_hundred">800</string>
+    <string name="your_vouchers">your vouchers</string>
+    <string name="get_cash">Get cash instantly!</string>
+    <string name="instant_cash_amnt">₹586</string>
+    <string name="instant_cash_coin">1 = ₹0.25</string>
+    <string name="explore_vouchers">Explore Vouchers</string>
+    <string name="food">Food</string>
+    <string name="travel">Travel</string>
+    <string name="shopping">Shopping</string>
+    <string name="see_all">See All</string>
 </resources>

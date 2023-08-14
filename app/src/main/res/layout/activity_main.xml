@@ -9,7 +9,6 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toTopOf="@id/bottom_bar"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="60dp">
 
@@ -141,6 +140,7 @@
                     app:layout_constraintTop_toBottomOf="@id/credit_score_card" />
 
                 <ImageView
+                    android:id="@+id/never_miss_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/margin_left_home"

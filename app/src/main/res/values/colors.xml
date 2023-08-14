@@ -12,4 +12,5 @@
     <color name="credit_score_bg">#6E7170</color>
     <color name="grey_200">#CACFCF</color>
     <color name="green_200">#00C197</color>
+    <color name="grey_100">#ADB2B2</color>
 </resources>

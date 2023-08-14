@@ -1,6 +1,7 @@
 package com.example.cheqanimationdesign
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -23,11 +24,10 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         setStatusBarColor(this, R.color.home_top_bg_color)
         setViews()
-        //resizeTextView()
+        resizeTextView()
     }
 
     private fun setViews() {
-
         // Axis card
         binding.repaymentCard.icAxis.bankImg.setImageDrawable(
             AppCompatResources.getDrawable(
@@ -65,14 +65,20 @@ class MainActivity : AppCompatActivity() {
         binding.repaymentCard.icBob.axisDescTxt.text = getString(R.string.credit_card_text)
         binding.repaymentCard.icBob.noBillTxt.visibility = View.VISIBLE
         binding.repaymentCard.icBob.noBillTxt.text = getString(R.string.no_bill_found)
+
+        binding.bottomBar.rewardsIcon.setOnClickListener { view ->
+            startActivity(Intent(this, ViewPressingActivity::class.java))
+        }
     }
 
     private fun resizeTextView() {
         val scaleAnimation =
-            AnimationUtils.loadAnimation(this@MainActivity, R.anim.drop_down_animation)
-        binding.welcomeTxt.startAnimation(scaleAnimation)
-        binding.coinBar.startAnimation(scaleAnimation)
-        binding.profileIcToolbar.startAnimation(scaleAnimation)
+            AnimationUtils.loadAnimation(this@MainActivity, R.anim.translate_up_animation)
+        binding.bottomBar.root.startAnimation(scaleAnimation)
+        binding.neverMissCard.startAnimation(scaleAnimation)
+//        binding.welcomeTxt.startAnimation(scaleAnimation)
+//        binding.coinBar.startAnimation(scaleAnimation)
+//        binding.profileIcToolbar.startAnimation(scaleAnimation)
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {
