@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_left_home">24dp</dimen>
+    <dimen name="margin_top_home">25dp</dimen>
+    <dimen name="margin_right_coin">12dp</dimen>
+    <dimen name="coin_card_corner_radius">16dp</dimen>
+    <dimen name="card_radius_200">12dp</dimen>
+
+
+    // text sizes
+    <dimen name="text_size_bold">20sp</dimen>
+    <dimen name="text_size_regular">12sp</dimen>
+    <dimen name="text_size_regular_400">14sp</dimen>
+    <dimen name="text_size_regular_600">16sp</dimen>
+    <dimen name="txt_super_bold">22sp</dimen>
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_bold_500">24sp</dimen>
+    <dimen name="text_size_bold_700">28sp</dimen>
+</resources>

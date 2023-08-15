@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="16dp"
+            android:layout_marginBottom="60dp"
+            tools:layout_editor_absoluteY="117dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/vouchers_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30sp"
+                    android:layout_marginStart="@dimen/margin_left_home"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/basier_circle_bold"
+                    android:text="@string/vouchers_cash"
+                    android:textColor="@color/black_500"
+                    android:textSize="@dimen/text_size_bold"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/profile_ic_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_left_home"
+                    android:src="@drawable/ic_help"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/vouchers_txt" />
+
+                <include
+                    android:id="@+id/chip_card"
+                    layout="@layout/chip_balance_card"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="20dp"
+                    app:layout_constraintStart_toStartOf="@id/vouchers_txt"
+                    app:layout_constraintTop_toBottomOf="@id/vouchers_txt" />
+
+                <include
+                    android:id="@+id/voucher_card"
+                    layout="@layout/your_vouchers_card"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_left_home"
+                    android:elevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/chip_card" />
+
+                <include
+                    android:id="@+id/instant_cash_card"
+                    layout="@layout/instant_cash_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_left_home"
+                    android:layout_marginTop="20dp"
+                    android:elevation="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/voucher_card" />
+
+                <TextView
+                    android:id="@+id/explore_vouchers_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left_home"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/explore_vouchers"
+                    android:textAllCaps="true"
+                    android:textColor="@color/credit_score_bg"
+                    android:textSize="@dimen/text_size_small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/instant_cash_card" />
+
+                <ImageView
+                    android:id="@+id/ic_food_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_food"
+                    app:layout_constraintStart_toStartOf="@id/explore_vouchers_txt"
+                    app:layout_constraintTop_toBottomOf="@id/explore_vouchers_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/food"
+                    android:textColor="@color/black_500"
+                    android:textSize="@dimen/text_size_regular_400"
+                    app:layout_constraintEnd_toEndOf="@id/ic_food_img"
+                    app:layout_constraintStart_toStartOf="@id/ic_food_img"
+                    app:layout_constraintTop_toBottomOf="@id/ic_food_img" />
+
+                <ImageView
+                    android:id="@+id/ic_travel_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_travel"
+                    app:layout_constraintStart_toEndOf="@id/ic_food_img"
+                    app:layout_constraintTop_toBottomOf="@id/explore_vouchers_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/travel"
+                    android:textColor="@color/black_500"
+                    android:textSize="@dimen/text_size_regular_400"
+                    app:layout_constraintEnd_toEndOf="@id/ic_travel_img"
+                    app:layout_constraintStart_toStartOf="@id/ic_travel_img"
+                    app:layout_constraintTop_toBottomOf="@id/ic_travel_img" />
+
+                <ImageView
+                    android:id="@+id/ic_shopping_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_shopping"
+                    app:layout_constraintStart_toEndOf="@id/ic_travel_img"
+                    app:layout_constraintTop_toBottomOf="@id/explore_vouchers_txt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/shopping"
+                    android:textColor="@color/black_500"
+                    android:textSize="@dimen/text_size_regular_400"
+                    app:layout_constraintEnd_toEndOf="@id/ic_shopping_img"
+                    app:layout_constraintStart_toStartOf="@id/ic_shopping_img"
+                    app:layout_constraintTop_toBottomOf="@id/ic_shopping_img" />
+
+                <ImageView
+                    android:id="@+id/ic_see_all_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_see_all"
+                    app:layout_constraintStart_toEndOf="@id/ic_shopping_img"
+                    app:layout_constraintTop_toBottomOf="@id/explore_vouchers_txt" />
+
+                <TextView
+                    android:id="@+id/see_all_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/see_all"
+                    android:textColor="@color/black_500"
+                    android:textSize="@dimen/text_size_regular_400"
+                    app:layout_constraintEnd_toEndOf="@id/ic_see_all_img"
+                    app:layout_constraintStart_toStartOf="@id/ic_see_all_img"
+                    app:layout_constraintTop_toBottomOf="@id/ic_see_all_img" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/featured_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/deal_view_bg"
+                    app:layout_constraintTop_toBottomOf="@id/see_all_txt">
+
+                    <TextView
+                        android:id="@+id/feature_deals_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_left_home"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/basier_circle_bold"
+                        android:text="@string/featured_deals"
+                        android:textAllCaps="true"
+                        android:textColor="@color/credit_score_bg"
+                        android:textSize="@dimen/text_size_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <include
+                        android:id="@+id/deals_coin_card"
+                        layout="@layout/deals_coin_layout"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/feature_deals_txt" />
+
+                    <include
+                        android:id="@+id/deals_rv_layout"
+                        layout="@layout/deals_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/feature_deals_txt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/other_deals_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@color/home_top_bg_color"
+                    app:layout_constraintTop_toBottomOf="@id/featured_layout">
+
+                    <TextView
+                        android:id="@+id/other_feature_deals_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_left_home"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/basier_circle_bold"
+                        android:text="@string/other_featured_deals"
+                        android:textAllCaps="true"
+                        android:textColor="@color/credit_score_bg"
+                        android:textSize="@dimen/text_size_regular"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <include
+                        android:id="@+id/other_deals_rv_layout"
+                        layout="@layout/deals_recycler_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/other_feature_deals_txt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/other_deals_layout"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/ic_footer"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottom_bar"
+            layout="@layout/bottom_nav_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

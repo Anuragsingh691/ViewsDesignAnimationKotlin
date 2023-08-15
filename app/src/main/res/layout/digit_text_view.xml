@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center_vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/currentTextView"
+        android:textColor="@color/black_500"
+        android:textSize="@dimen/txt_super_bold"
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:fontFamily="@font/basier_circle_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/nextTextView"
+        android:textColor="@color/black_500"
+        android:textSize="@dimen/txt_super_bold"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/basier_circle_semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</FrameLayout>

@@ -1,37 +1,36 @@
-package com.example.cheqanimationdesign
+package com.example.cheqanimationdesign.ui
 
 import android.content.Context
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
-import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
-import com.example.cheqanimationdesign.databinding.ActivityMainBinding
-import com.robinhood.ticker.TickerUtils
+import com.example.cheqanimationdesign.R
+import com.example.cheqanimationdesign.databinding.ActivityEmptyClickedBinding
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-
+class EmptyClickedActivity : AppCompatActivity() {
+    lateinit var binding: ActivityEmptyClickedBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityEmptyClickedBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setStatusBarColor(this, R.color.home_top_bg_color)
     }
 
     override fun onResume() {
         super.onResume()
-        setStatusBarColor(this,R.color.white)
-    }
-
-    private fun resizeTextView() {
-        val scaleAnimation = AnimationUtils.loadAnimation(this@MainActivity, R.anim.expand_x)
-        binding.txtView.startAnimation(scaleAnimation)
+        binding.icBack.setOnClickListener { view ->
+            onBackPressed()
+        }
     }
 
     private fun setStatusBarColor(context: Context, color: Int) {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         window.statusBarColor = ContextCompat.getColor(context, color)
+    }
+
+    companion object {
+        fun newInstance() = EmptyClickedActivity()
     }
 }

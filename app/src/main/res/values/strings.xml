@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">CheqAnimationDesign</string>
+    <string name="welcome_txt">Welcome</string>
+    <string name="coin_txt">4,567</string>
+    <string name="coin_txt2">2344</string>
+    <string name="total_due">Total due</string>
+    <string name="rupees">₹</string>
+    <string name="due_amount">₹ 60000  </string>
+    <string name="axis_due_amount">₹30,000.06</string>
+    <string name="no_bill_found">No bill found</string>
+    <string name="due_in_3_days">Due in 3 days</string>
+    <string name="overdue_by_1_day">Overdue by 1 day</string>
+    <string name="axis_platinum_title">Axis Platinum</string>
+    <string name="credit_card_text">Credit Card</string>
+    <string name="sbi_simply_title">SBI Simply Click</string>
+    <string name="bob_credit_title">BOB Credit Platinum</string>
+    <string name="pay_now_title">Pay Now</string>
+    <string name="earn_cheq_points">Earn 1% CheQ Chips</string>
+    <string name="cred_score_title">YOUR CREDIT SCORE</string>
+    <string name="powered_by">Powered by</string>
+    <string name="deno_string">/900</string>
+    <string name="num">799</string>
+    <string name="good">very good</string>
+    <string name="home">Home</string>
+    <string name="pay">Pay</string>
+    <string name="rewards">Rewards</string>
+    <string name="action_recommended">ACTION RECOMMENDED</string>
+    <string name="vouchers_cash">Vouchers &amp; Cash</string>
+    <string name="chips_balance">Chips Balance</string>
+    <string name="waiting_txt">waiting</string>
+    <string name="eight_hundred">800</string>
+    <string name="your_vouchers">your vouchers</string>
+    <string name="get_cash">Get cash instantly!</string>
+    <string name="instant_cash_amnt">₹586</string>
+    <string name="instant_cash_coin">1 = ₹0.25</string>
+    <string name="explore_vouchers">Explore Vouchers</string>
+    <string name="food">Food</string>
+    <string name="travel">Travel</string>
+    <string name="shopping">Shopping</string>
+    <string name="see_all">See All</string>
+    <string name="featured_deals">Featured Deals</string>
+    <string name="deals_coin_text">1 = ₹1.00</string>
+    <string name="one_k">₹1000</string>
+    <string name="claim_now">Claim Now</string>
+    <string name="deals_coin_text2">1 = ₹0.50</string>
+    <string name="deals_coin_text3">1 = ₹0.40</string>
+    <string name="one_fifty">₹150</string>
+    <string name="other_featured_deals">OTHER Featured deals</string>
 </resources>

@@ -6,20 +6,152 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtView"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="#2196F3"
-            android:gravity="center"
-            android:text="Hello World!"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="60dp">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/top_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="460dp"
+                    android:background="@color/home_top_bg_color"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/welcome_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30sp"
+                        android:layout_marginStart="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/basier_circle_semibold"
+                        android:text="@string/welcome_txt"
+                        android:textColor="@color/black_500"
+                        android:textSize="@dimen/text_size_bold"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/tool_bar_coin_card"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="@dimen/margin_right_coin"
+                        android:paddingHorizontal="5dp"
+                        app:cardCornerRadius="@dimen/coin_card_corner_radius"
+                        app:layout_constraintBottom_toBottomOf="@id/profile_ic_toolbar"
+                        app:layout_constraintEnd_toStartOf="@id/profile_ic_toolbar"
+                        app:layout_constraintTop_toTopOf="@id/welcome_txt"
+                        app:strokeColor="@color/coin_card_bg"
+                        app:strokeWidth="1dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/coin_bar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/basier_circle_semibold"
+                                android:gravity="center"
+                                android:text="@string/coin_txt"
+                                android:textSize="@dimen/text_size_bold"
+                                app:drawableLeftCompat="@drawable/coin_ic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ImageView
+                        android:id="@+id/profile_ic_toolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_left_home"
+                        android:src="@drawable/profile_ic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/welcome_txt" />
+
+                    <include
+                        android:id="@+id/repayment_card"
+                        layout="@layout/due_credit_repayment_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/margin_left_home"
+                        android:layout_marginTop="20dp"
+                        android:elevation="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/welcome_txt" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/your_credit_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_left_home"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/basier_circle_medium"
+                    android:text="@string/cred_score_title"
+                    android:textColor="@color/credit_score_bg"
+                    android:textSize="@dimen/text_size_regular_400"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/top_layout" />
+
+                <include
+                    android:id="@+id/credit_score_card"
+                    layout="@layout/credit_score_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_left_home"
+                    android:layout_marginTop="10dp"
+                    android:elevation="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/your_credit_score" />
+
+                <TextView
+                    android:id="@+id/action_recommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/basier_circle_semibold"
+                    android:text="@string/action_recommended"
+                    android:textColor="@color/credit_score_bg"
+                    android:textSize="@dimen/text_size_regular"
+                    app:layout_constraintStart_toStartOf="@id/your_credit_score"
+                    app:layout_constraintTop_toBottomOf="@id/credit_score_card" />
+
+                <ImageView
+                    android:id="@+id/never_miss_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_left_home"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toBottomOf="@id/action_recommended"
+                    android:src="@drawable/never_miss_board_icon"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <include
+            android:id="@+id/bottom_bar"
+            layout="@layout/bottom_nav_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -2,4 +2,18 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="home_top_bg_color">#FAF8F8</color>
+    <color name="coin_card_bg">#5EDABF</color>
+    <color name="line_bg">#E6EAE9</color>
+    <color name="black_500">#131414</color>
+    <color name="dsc_grey">#858989</color>
+    <color name="overdue_color">#F5466A</color>
+    <color name="expand_color_bg">#00C197</color>
+    <color name="credit_score_bg">#6E7170</color>
+    <color name="grey_200">#CACFCF</color>
+    <color name="green_200">#00C197</color>
+    <color name="grey_100">#ADB2B2</color>
+    <color name="deals_coin_card_bg">#E4BC33</color>
+    <color name="swiggy_bg_color">#FF8803</color>
+    <color name="subway_bg_color">#008938</color>
 </resources>
