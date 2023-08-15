@@ -13,7 +13,7 @@ import java.util.Locale;
 
 public class DigitTextView extends FrameLayout {
 
-        private static int ANIMATION_DURATION = 100;
+        private static int ANIMATION_DURATION = 120;
         TextView currentTextView, nextTextView;
 
         public DigitTextView(Context context, AttributeSet attrs) {

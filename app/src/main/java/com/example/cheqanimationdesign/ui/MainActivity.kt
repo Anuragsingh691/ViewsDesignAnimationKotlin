@@ -15,7 +15,9 @@ import com.example.cheqanimationdesign.util.Utils
 import com.example.cheqanimationdesign.util.onClick
 import com.example.cheqanimationdesign.util.show
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.seconds
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -79,8 +81,10 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             async { animateDropDownViews() }.await()
             async { animateComplexViews() }.await()
-            binding.repaymentCard.totalDueAmountTxt.setValue(60000)
-//            Utils.startCountAnimation(binding.repaymentCard.totalDueAmountTxt)
+            async {
+                delay(1.seconds)
+                binding.repaymentCard.totalDueAmountTxt.setValue(60000)
+            }.await()
         }
     }
 

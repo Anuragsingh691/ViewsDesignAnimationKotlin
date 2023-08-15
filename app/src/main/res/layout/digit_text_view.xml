@@ -9,7 +9,6 @@
         android:id="@+id/currentTextView"
         android:textColor="@color/black_500"
         android:textSize="@dimen/txt_super_bold"
-        tools:text="60000"
         android:gravity="center_vertical"
         android:layout_gravity="center"
         android:fontFamily="@font/basier_circle_semibold"

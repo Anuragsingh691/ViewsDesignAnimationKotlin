@@ -44,12 +44,4 @@ object Utils {
         brandsList.add(subwayData2)
         return brandsList.toList()
     }
-
-    fun startCountAnimation(textView: TextView) {
-        val animator = ValueAnimator.ofInt(5000, 6000) //0 is min number, 600 is max number
-        animator.duration = 6000 //Duration is in milliseconds
-        val rupessSymbol = textView.context.getString(R.string.rupees)
-        animator.addUpdateListener { animation -> textView.setText(rupessSymbol + animation.animatedValue.toString()) }
-        animator.start()
-    }
 }
