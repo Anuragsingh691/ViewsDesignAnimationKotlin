@@ -44,7 +44,7 @@ class ViewPressingActivity : AppCompatActivity() {
         binding.otherDealsRvLayout.recyclerView.addItemDecoration(
             SpacesItemDecoration(10)
         )
-        binding.bottomBar.homeIcon.setOnClickListener { view ->
+        binding.bottomBar.homeIconLayout.setOnClickListener { view ->
             onBackPressed()
         }
         binding.chipCard.root.onClick(this, EmptyClickedActivity.newInstance())
