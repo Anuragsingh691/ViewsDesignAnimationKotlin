@@ -79,7 +79,8 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             async { animateDropDownViews() }.await()
             async { animateComplexViews() }.await()
-            Utils.startCountAnimation(binding.repaymentCard.totalDueAmountTxt)
+            binding.repaymentCard.totalDueAmountTxt.setValue(60000)
+//            Utils.startCountAnimation(binding.repaymentCard.totalDueAmountTxt)
         }
     }
 
