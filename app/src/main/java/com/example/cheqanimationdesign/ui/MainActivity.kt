@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         binding.repaymentCard.icBob.noBillTxt.visibility = View.VISIBLE
         binding.repaymentCard.icBob.noBillTxt.text = getString(R.string.no_bill_found)
 
-        binding.bottomBar.rewardsIcon.onClick(this, ViewPressingActivity.newInstance())
+        binding.bottomBar.rewardsIconLayout.onClick(this, ViewPressingActivity.newInstance())
     }
 
     private fun animateViews() {
