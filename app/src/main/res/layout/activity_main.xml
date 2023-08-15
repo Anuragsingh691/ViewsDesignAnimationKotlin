@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/margin_left_home"
                     android:layout_marginTop="25dp"
-                    android:fontFamily="@font/basier_circle_medium"
+                    android:fontFamily="@font/basier_circle_semibold"
                     android:text="@string/cred_score_title"
                     android:textColor="@color/credit_score_bg"
                     android:textSize="@dimen/text_size_regular_400"
@@ -125,7 +125,7 @@
                     android:fontFamily="@font/basier_circle_semibold"
                     android:text="@string/action_recommended"
                     android:textColor="@color/credit_score_bg"
-                    android:textSize="@dimen/text_size_regular"
+                    android:textSize="@dimen/text_size_regular_400"
                     app:layout_constraintStart_toStartOf="@id/your_credit_score"
                     app:layout_constraintTop_toBottomOf="@id/credit_score_card" />
 

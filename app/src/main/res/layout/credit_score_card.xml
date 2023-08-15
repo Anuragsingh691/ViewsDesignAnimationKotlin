@@ -97,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/basier_circle_regular"
                     android:text="@string/good"
+                    android:textAllCaps="true"
                     android:textColor="@color/green_200"
                     android:textSize="@dimen/text_size_regular"
                     app:layout_constraintEnd_toEndOf="@id/deno"

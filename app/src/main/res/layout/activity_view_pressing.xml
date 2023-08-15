@@ -180,7 +180,7 @@
                     android:id="@+id/featured_layout"
                     android:layout_width="match_parent"
                     android:layout_height="320dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/deal_view_bg"
                     app:layout_constraintTop_toBottomOf="@id/see_all_txt">
 
